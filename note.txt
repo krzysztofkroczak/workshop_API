@@ -60,3 +60,23 @@ string Concatenation is monoid not collection as self! In .Net collection is mon
 
 
 Even though if some types aren't not monoids, you can transform them to monoids and do operations on monoids
+
+We can create `null object` when it behaves like monoid.
+
+foldable - specific of catmorphism
+LINQ aggregate will throw exception for this signature: (new int[0].Aggregate(Math.Max))
+when using accumulator it doesn't (new int[0].Aggregate(0,Math.Max))
+
+My note: I don't think so
+[__DynamicallyInvokable]
+    public static TAccumulate Aggregate<TSource, TAccumulate>(this IEnumerable<TSource> source, TAccumulate seed, Func<TAccumulate, TSource, TAccumulate> func)
+    {
+      if (source == null)
+        throw Error.ArgumentNull(nameof (source));
+      if (func == null)
+        throw Error.ArgumentNull(nameof (func));
+      TAccumulate accumulate = seed;
+      foreach (TSource source1 in source)
+        accumulate = func(accumulate, source1);
+      return accumulate;
+    }
