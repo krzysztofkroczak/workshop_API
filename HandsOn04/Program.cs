@@ -20,6 +20,8 @@ namespace Ploeh.Workshop.DPtoCT.HandsOn04
             var adjusted = adjustment.Adjust(dt);
 
             Console.WriteLine(adjusted.ToString("o"));
+
+            Console.ReadKey();
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Ploeh.Workshop.DPtoCT.HandsOn04
 
         public DateTimeOffset Adjust(DateTimeOffset value)
         {
-            throw new NotImplementedException();
+            return adjustments.Aggregate(value, (current, ad) => ad.Adjust(current));
         }
     }
 }
