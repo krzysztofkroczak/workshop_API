@@ -1,0 +1,17 @@
+Michael Fathers
+"any fool can write code that a computer can understand. Good programmers write code that human can understand."
+
+7 +-2 (keep tracking)
+chunk = grouping
+
+3 constraints of "productivity"
+resources
+time
+money
+
+Abstracyion = "the amplification of the essential and the elemination of irrelevant" (Uncle Bob)
+Encapsulation is broken when you need to read decompiled code.
+
+
+
+
