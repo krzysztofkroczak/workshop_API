@@ -15,7 +15,8 @@ namespace Ploeh.Workshop.DPtoCT.HandsOn04
                 new NextMonthAdjustment(),
                 new BusinessHoursAdjustment(),
                 new DutchBankDayAdjustment(),
-                new UtcAdjustment());
+                new UtcAdjustment(),
+                new NullDateTimeOffsetAdjustment());
 
             var adjusted = adjustment.Adjust(dt);
 

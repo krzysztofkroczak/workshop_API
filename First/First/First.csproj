@@ -43,6 +43,7 @@
     <Compile Include="CompositeTextWriter.cs" />
     <Compile Include="ConsoleTextWriter.cs" />
     <Compile Include="FileTextWriter.cs" />
+    <Compile Include="NullTextWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

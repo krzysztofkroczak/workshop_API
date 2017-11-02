@@ -18,11 +18,14 @@ namespace Ploeh.Workshop.DPtoCT.HandsOn02
             IPriceCalculator calculator =
                 new CompositePriceCalculator(
                     new BasketContentsPriceCalculator(),
-                    new VatCalculator(.25m)); // Whopping Danish VAT!!
+                    new VatCalculator(.25m),
+                    new NullPriceCalculator()); // Whopping Danish VAT!!
 
             var price = calculator.CalculatePrice(basket);
 
             Console.WriteLine($"Price: {price}");
+
+            Console.ReadKey();
         }
     }
 }

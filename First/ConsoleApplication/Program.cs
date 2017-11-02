@@ -1,4 +1,5 @@
-﻿using First;
+﻿using System;
+using First;
 
 namespace ConsoleApplication
 {
@@ -7,7 +8,7 @@ namespace ConsoleApplication
         public static void Main(string[] args)
         {
             var writer = new CompositeTextWriter(new ConsoleTextWriter(),
-                new FileTextWriter(@"./Messages.txt"));
+                new FileTextWriter(@"./Messages.txt"), new NullTextWriter());
             
             writer.WriteLines("Foo");
             writer.WriteLines("Bar");
@@ -15,6 +16,8 @@ namespace ConsoleApplication
             writer.Clear();
             writer.WriteLines("Ploeh");
             writer.WriteLines("Fnahh");
+
+            Console.ReadKey();
         }
     }
 }
