@@ -1,17 +1,29 @@
-Michael Fathers
-"any fool can write code that a computer can understand. Good programmers write code that human can understand."
+Michael Fathers : "any fool can write code that a computer can understand. Good programmers write code that human can understand."
 
 7 +-2 (keep tracking)
 chunk = grouping
 
 3 constraints of "productivity"
-resources
+resources = devs ;) + money
 time
 money
 
 Abstracyion = "the amplification of the essential and the elemination of irrelevant" (Uncle Bob)
+Dijkstra: "Being abstract is something profoundly different from being vague … The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise."
 Encapsulation is broken when you need to read decompiled code.
 
 
+CQS principle
 
+reusable abstractions, design patterns
 
+Closure of operations (DDD, Eric Evans)
+
+Composite - you can use this pattern when interface is *monoid* [synonym: combinable, reduciblie](it's not monads) 
+Watch return types of interface
+
+Referential transparancy = Type arguments taken into operation returns the same type 1+1=2; number+number=number
+
+mono = alone/single/
+iod = -like
+monoid = onelike
