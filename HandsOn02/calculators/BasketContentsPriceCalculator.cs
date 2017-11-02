@@ -6,7 +6,7 @@ namespace Ploeh.Workshop.DPtoCT.HandsOn02.calculators
     {
         public decimal CalculatePrice(Basket basket)
         {
-            return basket.Sum(p=>p.Price);
+            return basket.Sum(p => p.Price);
         }
     }
 }
