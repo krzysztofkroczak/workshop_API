@@ -1,3 +1,5 @@
+(Check this)Category theory
+
 Michael Fathers : "any fool can write code that a computer can understand. Good programmers write code that human can understand."
 
 7 +-2 (keep tracking)
@@ -27,3 +29,14 @@ Referential transparancy = Type arguments taken into operation returns the same 
 mono = alone/single/
 iod = -like
 monoid = onelike
+Example of monoid: composition pattern, SQL COALESCE
+
+It's wrong:
+Customer ICompositRepository::Read(Guid id)
+Not applicable to composite
+First<Customer> ICompositRepository::Read(Guid id)
+
+First<T> will return Left-most non-empty value
+This is related to f# `option`, in Haskell 'maybe'?
+
+We change null with Identity (it is accumulator value)
