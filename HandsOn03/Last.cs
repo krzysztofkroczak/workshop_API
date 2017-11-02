@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Ploeh.Workshop.DPtoCT.HandsOn03
 {
@@ -10,7 +11,7 @@ namespace Ploeh.Workshop.DPtoCT.HandsOn03
 
         public Last()
         {
-            this.hasItem = false;
+            hasItem = false;
         }
 
         public Last(T item)
@@ -19,20 +20,19 @@ namespace Ploeh.Workshop.DPtoCT.HandsOn03
                 throw new ArgumentNullException(nameof(item));
 
             this.item = item;
-            this.hasItem = true;
+            hasItem = true;
         }
 
         public Last<T> FindLast(Last<T> other)
         {
-            if (other.hasItem)
-                return other;
-            else
-                return this;
+            return other.hasItem 
+                ? other 
+                : this;
         }
 
         public override string ToString()
         {
-            var itemString = this.hasItem ? this.item.ToString() : "";
+            var itemString = hasItem ? item.ToString() : "";
             return $"Last<{typeof(T).Name}>({itemString})";
         }
     }
@@ -47,9 +47,7 @@ namespace Ploeh.Workshop.DPtoCT.HandsOn03
         public static Last<T> Accumulate<T>(IReadOnlyList<Last<T>> lasts)
         {
             var acc = Identity<T>();
-            foreach (var last in lasts)
-                acc = acc.FindLast(last);
-            return acc;
+            return lasts.Aggregate(acc, (current, last) => current.FindLast(last));
         }
     }
 }
