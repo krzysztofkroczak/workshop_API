@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ploeh.Workshop.DPtoCT.HandsOn03
 {
@@ -13,7 +11,7 @@ namespace Ploeh.Workshop.DPtoCT.HandsOn03
 
         public First()
         {
-            this.hasItem = false;
+            hasItem = false;
         }
 
         public First(T item)
@@ -22,20 +20,19 @@ namespace Ploeh.Workshop.DPtoCT.HandsOn03
                 throw new ArgumentNullException(nameof(item));
 
             this.item = item;
-            this.hasItem = true;
+            hasItem = true;
         }
 
         public First<T> FindFirst(First<T> other)
         {
-            if (this.hasItem)
-                return this;
-            else
-                return other;
+            return this.hasItem 
+                ? this 
+                : other;
         }
 
         public override string ToString()
         {
-            var itemString = this.hasItem ? this.item.ToString() : "";
+            var itemString = hasItem ? item.ToString() : "";
             return $"First<{typeof(T).Name}>({itemString})";
         }
     }
@@ -50,9 +47,7 @@ namespace Ploeh.Workshop.DPtoCT.HandsOn03
         public static First<T> Accumulate<T>(IReadOnlyList<First<T>> firsts)
         {
             var acc = Identity<T>();
-            foreach (var first in firsts)
-                acc = acc.FindFirst(first);
-            return acc;
+            return firsts.Aggregate(acc, (current, first) => current.FindFirst(first));
         }
     }
 }
