@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Ploeh.Workshop.DPtoCT.HandsOn02.calculators;
 
 namespace Ploeh.Workshop.DPtoCT.HandsOn02
 {
@@ -10,11 +7,13 @@ namespace Ploeh.Workshop.DPtoCT.HandsOn02
     {
         static void Main(string[] args)
         {
-            var basket = new Basket();
-            basket.Add(new Product { Name = "Chocolate", Price = 40m });
-            basket.Add(new Product { Name = "Water", Price = 2.4m });
-            basket.Add(new Product { Name = "Newspaper", Price = 10m });
-            basket.Add(new Product { Name = "Water", Price = 2.4m });
+            var basket = new Basket
+            {
+                new Product {Name = "Chocolate", Price = 40m},
+                new Product {Name = "Water", Price = 2.4m},
+                new Product {Name = "Newspaper", Price = 10m},
+                new Product {Name = "Water", Price = 2.4m}
+            };
 
             IPriceCalculator calculator =
                 new CompositePriceCalculator(

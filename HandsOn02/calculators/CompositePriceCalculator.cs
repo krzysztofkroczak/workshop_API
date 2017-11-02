@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
-namespace Ploeh.Workshop.DPtoCT.HandsOn02
+namespace Ploeh.Workshop.DPtoCT.HandsOn02.calculators
 {
     public class CompositePriceCalculator : IPriceCalculator
     {
