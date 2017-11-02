@@ -21,7 +21,7 @@ reusable abstractions, design patterns
 
 Closure of operations (DDD, Eric Evans)
 
-Composite - you can use this pattern when interface is *monoid* [synonym: combinable, reduciblie](it's not monads) 
+Composite - you can use this pattern when return types are *monoids* [synonym: combinable, reduciblie](it's not monads) 
 Watch return types of interface
 
 Referential transparancy = Type arguments taken into operation returns the same type 1+1=2; number+number=number
@@ -52,3 +52,11 @@ Mnoid is binary associative opeartion with identity
 How to identify `identity`:
 id <> foo = foo
 foo <> id = foo
+
+Identity is associated with operation!
+string Concatenation is monoid not collection as self! In .Net collection is monoid, but just FINITE collection, so infinite IEnumerable isn't monoid
+
+[Introduce parameter object - pattern](https://refactoring.com/catalog/introduceParameterObject.html)
+
+
+Even though if some types aren't not monoids, you can transform them to monoids and do operations on monoids
