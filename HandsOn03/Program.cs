@@ -21,21 +21,23 @@ namespace Ploeh.Workshop.DPtoCT.HandsOn03
              * 
              * */
 
-            var result = First.Accumulate(new[] {
+            var resultFirst = First.Accumulate(new[] {
                 new First<int>(),
                 new First<int>(42),
                 new First<int>(),
                 new First<int>(1337),
                 new First<int>() });
 
-            //var result = Last.Accumulate(new[] {
-            //    new Last<int>(),
-            //    new Last<int>(42),
-            //    new Last<int>(),
-            //    new Last<int>(1337),
-            //    new Last<int>() });
+            var resultLast = Last.Accumulate(new[] {
+                new Last<int>(),
+                new Last<int>(42),
+                new Last<int>(),
+                new Last<int>(1337),
+                new Last<int>() });
 
-            Console.WriteLine(result);
+            Console.WriteLine(resultFirst);
+            Console.WriteLine(resultLast);
+            Console.ReadKey();
         }
     }
 }
