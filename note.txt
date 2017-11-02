@@ -40,3 +40,15 @@ First<T> will return Left-most non-empty value
 This is related to f# `option`, in Haskell 'maybe'?
 
 We change null with Identity (it is accumulator value)
+
+What compose Monoids:
+* binary operations 
+* identity
+* keep chaining
+* associative 
+
+Mnoid is binary associative opeartion with identity
+
+How to identify `identity`:
+id <> foo = foo
+foo <> id = foo
