@@ -52,8 +52,8 @@ We change null with Identity (it is accumulator value)
 Monoid is binary associative opeartion with identity
 
 How to identify `identity`:
-id <> foo = foo
-foo <> id = foo
+* `id <> foo = foo`
+* `foo <> id = foo`
 
 Identity is associated with operation!
 string Concatenation is monoid not collection as self! In .Net collection is monoid, but just FINITE collection, so infinite IEnumerable isn't monoid
