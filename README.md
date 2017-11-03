@@ -1,15 +1,19 @@
 # (Check this)Category theory -> [look for Group-like structures image](https://en.wikipedia.org/wiki/Semigroup)
 
 # Code should be readible
-Michael Fathers : "any fool can write code that a computer can understand. Good programmers write code that human can understand."  
+*Michael Fathers* : "any fool can write code that a computer can understand. Good programmers write code that human can understand."  
 
 Items in mind 7 +-2 (keep tracking)
 chunk = grouping (if there's more elements that we need keep tracking in our head we start grouping things in one chunk)
 
+# Prodcutivity
 3 constraints of "productivity":
 * resources = devs ;) + money
 * time
 * ??
+It's hard to measure productivity. And even though maybe it is impossible.   
+Example of pointless measurement is : `lines of code`
+[Article about productivity tools](http://blog.ploeh.dk/2013/02/04/BewareofProductivityTools/)
 
 # Definition of **abstraction**:  
 * *Uncle Bob* : "the amplification of the essential and the elemination of irrelevant"
